@@ -145,6 +145,7 @@ INSERT INTO trabalhobd_pizzaria.cliente (nome, telefone, endereco) VALUES ('Mari
 INSERT INTO trabalhobd_pizzaria.cliente (nome, telefone, endereco) VALUES ('José', '777777777', 'Rua 3');
 INSERT INTO trabalhobd_pizzaria.cliente (nome, telefone, endereco) VALUES ('Ana', '666666666', 'Rua 4');
 INSERT INTO trabalhobd_pizzaria.cliente (nome, telefone, endereco) VALUES ('Thaina', '555555555', 'Rua 5');
+INSERT INTO trabalhobd_pizzaria.cliente (nome, telefone, endereco) VALUES ('Pedro', '444444444', 'Rua 6');
 
 SELECT * from trabalhobd_pizzaria.cliente;
 SELECT * from trabalhobd_pizzaria.entregas;
