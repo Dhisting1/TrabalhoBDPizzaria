@@ -155,6 +155,7 @@ INSERT INTO trabalhobd_pizzaria.pizza (nome, ingrediente, descricao, preco) VALU
 INSERT INTO trabalhobd_pizzaria.pizza (nome, ingrediente, descricao, preco) VALUES ('Mussarela', 'Mussarela', 'Mussarela com tomate', 30.00);
 INSERT INTO trabalhobd_pizzaria.pizza (nome, ingrediente, descricao, preco) VALUES ('Portuguesa', 'Presunto, Mussarela, Ovo, Cebola, Tomate', 'Presunto, Mussarela, Ovo, Cebola, Tomate', 30.00);
 INSERT INTO trabalhobd_pizzaria.pizza (nome, ingrediente, descricao, preco) VALUES ('Frango com Catupiry', 'Frango, Catupiry', 'Frango, Catupiry', 30.00);
+INSERT INTO trabalhobd_pizzaria.pizza (nome, ingrediente, descricao, preco) VALUES ('Calabresa com Catupiry', 'Calabresa, Catupiry', 'Calabresa, Catupiry', 30.00);
 INSERT INTO trabalhobd_pizzaria.ingredientes (nome, quantidade_estoque) VALUES ('Calabresa', 10);
 INSERT INTO trabalhobd_pizzaria.ingredientes (nome, quantidade_estoque) VALUES ('Mussarela', 10);
 INSERT INTO trabalhobd_pizzaria.ingredientes (nome, quantidade_estoque) VALUES ('Presunto', 10);
@@ -183,6 +184,19 @@ INSERT INTO trabalhobd_pizzaria.entregas (data_entrega, status_entrega, fk_pedid
 INSERT INTO trabalhobd_pizzaria.entregas (data_entrega, status_entrega, fk_pedido, fk_funcionario) VALUES ('2021-11-03', 'Saiu para entrega', 3, 3);
 INSERT INTO trabalhobd_pizzaria.entregas (data_entrega, status_entrega, fk_pedido, fk_funcionario) VALUES ('2021-05-03', 'Entregue', 4, 4);
 INSERT INTO trabalhobd_pizzaria.entregas (data_entrega, status_entrega, fk_pedido, fk_funcionario) VALUES ('2021-06-03', 'Entregue', 5, 4);
+
+INSERT INTO trabalhobd_pizzaria.pagamentos (metodo_pagamento, valor_compra, data_pagamento, fk_pedido) VALUES ('Dinheiro', 30.00, '2020-01-01', 1);
+INSERT INTO trabalhobd_pizzaria.pagamentos (metodo_pagamento, valor_compra, data_pagamento, fk_pedido) VALUES ('Credito', 90.00, '2021-01-03', 2);
+INSERT INTO trabalhobd_pizzaria.pagamentos (metodo_pagamento, valor_compra, data_pagamento, fk_pedido) VALUES ('Debito', 60.00, '2021-11-03', 3); 
+INSERT INTO trabalhobd_pizzaria.pagamentos (metodo_pagamento, valor_compra, data_pagamento, fk_pedido) VALUES ('PIX', 60.00, '2021-11-03', 4);
+INSERT INTO trabalhobd_pizzaria.pagamentos (metodo_pagamento, valor_compra, data_pagamento, fk_pedido) VALUES ('Dinheiro', 30.00, '2021-06-03', 5);
+
+INSERT INTO trabalhobd_pizzaria.estoque (quantidade, data_atualizacao, fk_pizza_pz, fk_fornecedor_fc) VALUES (10, '2020-01-01', 1, 1);
+INSERT INTO trabalhobd_pizzaria.estoque (quantidade, data_atualizacao, fk_pizza_pz, fk_fornecedor_fc) VALUES (10, '2021-01-03', 2, 2);
+INSERT INTO trabalhobd_pizzaria.estoque (quantidade, data_atualizacao, fk_pizza_pz, fk_fornecedor_fc) VALUES (10, '2021-11-03', 3, 3);
+INSERT INTO trabalhobd_pizzaria.estoque (quantidade, data_atualizacao, fk_pizza_pz, fk_fornecedor_fc) VALUES (10, '2021-05-03', 4, 4);
+INSERT INTO trabalhobd_pizzaria.estoque (quantidade, data_atualizacao, fk_pizza_pz, fk_fornecedor_fc) VALUES (10, '2021-06-03', 5, 5);
+
 
 SELECT * from trabalhobd_pizzaria.cliente;
 SELECT * from trabalhobd_pizzaria.entregas;
