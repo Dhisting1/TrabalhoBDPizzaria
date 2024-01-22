@@ -62,7 +62,7 @@ CREATE TABLE `trabalhobd_pizzaria`.`pedido` (
 CREATE TABLE `trabalhobd_pizzaria`.`entregas` (
   `id_entregas` INT NOT NULL AUTO_INCREMENT,
   `data_entrega` DATETIME NOT NULL,
-  `status_entrega` VARCHAR(10) NOT NULL,
+  `status_entrega` VARCHAR(45) NOT NULL,
   `fk_pedido` INT NOT NULL,
   `fk_funcionario` INT NOT NULL,
   PRIMARY KEY (`id_entregas`),
@@ -146,6 +146,43 @@ INSERT INTO trabalhobd_pizzaria.cliente (nome, telefone, endereco) VALUES ('Jos�
 INSERT INTO trabalhobd_pizzaria.cliente (nome, telefone, endereco) VALUES ('Ana', '666666666', 'Rua 4');
 INSERT INTO trabalhobd_pizzaria.cliente (nome, telefone, endereco) VALUES ('Thaina', '555555555', 'Rua 5');
 INSERT INTO trabalhobd_pizzaria.cliente (nome, telefone, endereco) VALUES ('Pedro', '444444444', 'Rua 6');
+
+INSERT INTO trabalhobd_pizzaria.funcionario (nome, cargo, data_contratacao) VALUES ('João', 'Entregador', '2020-01-01');
+INSERT INTO trabalhobd_pizzaria.funcionario (nome, cargo, data_contratacao) VALUES ('Maria', 'Recepcionista', '2020-01-01');
+INSERT INTO trabalhobd_pizzaria.funcionario (nome, cargo, data_contratacao) VALUES ('José', 'Pizzaiolo', '2020-01-01');
+INSERT INTO trabalhobd_pizzaria.funcionario (nome, cargo, data_contratacao) VALUES ('Ana', 'Garconete', '2020-01-01');
+INSERT INTO trabalhobd_pizzaria.pizza (nome, ingrediente, descricao, preco) VALUES ('Calabresa', 'Calabresa', 'Calabresa com cebola', 30.00);
+INSERT INTO trabalhobd_pizzaria.pizza (nome, ingrediente, descricao, preco) VALUES ('Mussarela', 'Mussarela', 'Mussarela com tomate', 30.00);
+INSERT INTO trabalhobd_pizzaria.pizza (nome, ingrediente, descricao, preco) VALUES ('Portuguesa', 'Presunto, Mussarela, Ovo, Cebola, Tomate', 'Presunto, Mussarela, Ovo, Cebola, Tomate', 30.00);
+INSERT INTO trabalhobd_pizzaria.pizza (nome, ingrediente, descricao, preco) VALUES ('Frango com Catupiry', 'Frango, Catupiry', 'Frango, Catupiry', 30.00);
+INSERT INTO trabalhobd_pizzaria.ingredientes (nome, quantidade_estoque) VALUES ('Calabresa', 10);
+INSERT INTO trabalhobd_pizzaria.ingredientes (nome, quantidade_estoque) VALUES ('Mussarela', 10);
+INSERT INTO trabalhobd_pizzaria.ingredientes (nome, quantidade_estoque) VALUES ('Presunto', 10);
+INSERT INTO trabalhobd_pizzaria.ingredientes (nome, quantidade_estoque) VALUES ('Ovo', 10);
+INSERT INTO trabalhobd_pizzaria.ingredientes (nome, quantidade_estoque) VALUES ('Cebola', 10);
+INSERT INTO trabalhobd_pizzaria.ingredientes (nome, quantidade_estoque) VALUES ('Tomate', 10);
+INSERT INTO trabalhobd_pizzaria.ingredientes (nome, quantidade_estoque) VALUES ('Frango', 10);
+INSERT INTO trabalhobd_pizzaria.ingredientes (nome, quantidade_estoque) VALUES ('Catupiry', 10);
+
+INSERT INTO trabalhobd_pizzaria.fornecedor (nome, telefone, endereco) VALUES ('Fornecedor 1', '999999999', 'Rua 1');
+INSERT INTO trabalhobd_pizzaria.fornecedor (nome, telefone, endereco) VALUES ('Fornecedor 2', '888888888', 'Rua 2');
+INSERT INTO trabalhobd_pizzaria.fornecedor (nome, telefone, endereco) VALUES ('Fornecedor 3', '777777777', 'Rua 3');
+INSERT INTO trabalhobd_pizzaria.fornecedor (nome, telefone, endereco) VALUES ('Fornecedor 4', '666666666', 'Rua 4');
+INSERT INTO trabalhobd_pizzaria.fornecedor (nome, telefone, endereco) VALUES ('Fornecedor 5', '555555555', 'Rua 5');
+INSERT INTO trabalhobd_pizzaria.fornecedor (nome, telefone, endereco) VALUES ('Fornecedor 6', '444444444', 'Rua 6');
+
+INSERT INTO trabalhobd_pizzaria.pedido (data_pedido, quantidade, fk_cliente, fk_pizza) VALUES ('2020-01-01', 1, 1, 1);
+INSERT INTO trabalhobd_pizzaria.pedido (data_pedido, quantidade, fk_cliente, fk_pizza) VALUES ('2021-01-03', 3, 2, 2);
+INSERT INTO trabalhobd_pizzaria.pedido (data_pedido, quantidade, fk_cliente, fk_pizza) VALUES ('2021-11-03', 2, 3, 3);
+INSERT INTO trabalhobd_pizzaria.pedido (data_pedido, quantidade, fk_cliente, fk_pizza) VALUES ('2021-05-03', 2, 4, 4);
+INSERT INTO trabalhobd_pizzaria.pedido (data_pedido, quantidade, fk_cliente, fk_pizza) VALUES ('2021-06-03', 1, 5, 1);
+
+INSERT INTO trabalhobd_pizzaria.entregas (data_entrega, status_entrega, fk_pedido, fk_funcionario) VALUES ('2020-01-01', 'Entregue', 1, 1);
+INSERT INTO trabalhobd_pizzaria.entregas (data_entrega, status_entrega, fk_pedido, fk_funcionario) VALUES ('2021-01-03', 'Entregue', 2, 2);
+INSERT INTO trabalhobd_pizzaria.entregas (data_entrega, status_entrega, fk_pedido, fk_funcionario) VALUES ('2021-11-03', 'Entregue', 3, 3);
+INSERT INTO trabalhobd_pizzaria.entregas (data_entrega, status_entrega, fk_pedido, fk_funcionario) VALUES ('2021-11-03', 'Saiu para entrega', 3, 3);
+INSERT INTO trabalhobd_pizzaria.entregas (data_entrega, status_entrega, fk_pedido, fk_funcionario) VALUES ('2021-05-03', 'Entregue', 4, 4);
+INSERT INTO trabalhobd_pizzaria.entregas (data_entrega, status_entrega, fk_pedido, fk_funcionario) VALUES ('2021-06-03', 'Entregue', 5, 4);
 
 SELECT * from trabalhobd_pizzaria.cliente;
 SELECT * from trabalhobd_pizzaria.entregas;
