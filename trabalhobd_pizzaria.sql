@@ -124,6 +124,7 @@ CREATE TABLE `trabalhobd_pizzaria`.`estoque` (
     ON UPDATE NO ACTION
 );
 
+/*Exemplos de INSERT INTO  */
 INSERT INTO cliente (nome_cliente, telefone, endereco) VALUES ('João', '61 99111-1111', 'Rua 1');
 INSERT INTO cliente (nome_cliente, telefone, endereco) VALUES ('Maria', '61 99111-1112', 'Rua 2');
 INSERT INTO cliente (nome_cliente, telefone, endereco) VALUES ('José', '61 99111-1113', 'Rua 3');
@@ -194,7 +195,7 @@ INSERT INTO estoque (quantidade_estoque, data_atualizacao, pizza_id_pizza, forne
 INSERT INTO estoque (quantidade_estoque, data_atualizacao, pizza_id_pizza, fornecedor_id_fornecedor) VALUES (10, '2020-03-06', 5, 5);
 
 
-
+/*Exemplos de SELECT  */
 SELECT * FROM cliente;
 SELECT * FROM funcionarios;
 SELECT * FROM pizza;
@@ -205,3 +206,54 @@ SELECT * FROM entregas;
 SELECT * FROM pagamentos;
 SELECT * FROM fornecedor;
 SELECT * FROM estoque;
+
+/*Exemplos de UPDATE  */
+UPDATE cliente SET nome_cliente = 'João Silva' 
+WHERE id_cliente = 1;
+
+UPDATE funcionarios SET cargo_funcionarios = 'Supervisor' 
+WHERE id_funcionarios = 2;
+
+UPDATE pizza SET preco = 45.00
+ WHERE id_pizza = 3;
+ 
+UPDATE ingredientes SET quantidade_ingredientes = 15 
+WHERE id_ingredientes = 5;
+
+UPDATE pedidos SET status_pedido = 'Concluído'
+ WHERE id_pedidos = 2;
+
+/*Exemplos de DELETE  */
+DELETE FROM cliente
+ WHERE id_cliente = 3;
+ 
+DELETE FROM funcionarios 
+WHERE id_funcionarios = 4;
+
+DELETE FROM pizza
+ WHERE id_pizza = 5;
+
+DELETE FROM ingredientes
+ WHERE id_ingredientes = 8;
+ 
+DELETE FROM pedidos 
+WHERE id_pedidos = 1;
+
+/*Exemplos de DELETE  */
+SELECT * FROM cliente
+ WHERE endereco = 'Rua 2';
+ 
+SELECT * FROM pizza 
+WHERE preco > 35.00;
+
+SELECT * FROM pedidos 
+WHERE status_pedido = 'Entregue';
+
+SELECT * FROM ingredientes 
+WHERE quantidade_ingredientes < 15;
+
+SELECT * FROM entregas
+ WHERE funcionarios_id_funcionarios = 4;
+
+
+
