@@ -123,7 +123,7 @@ CREATE TABLE `trabalhobd_pizzaria`.`estoque` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 );
--- INSERT NA TABELA CLIENTE
+
 INSERT INTO cliente (nome_cliente, telefone, endereco) VALUES ('João', '61 99111-1111', 'Rua 1');
 INSERT INTO cliente (nome_cliente, telefone, endereco) VALUES ('Maria', '61 99111-1112', 'Rua 2');
 INSERT INTO cliente (nome_cliente, telefone, endereco) VALUES ('José', '61 99111-1113', 'Rua 3');
@@ -203,7 +203,6 @@ INSERT INTO estoque (quantidade_estoque, data_atualizacao, pizza_id_pizza, forne
 INSERT INTO estoque (quantidade_estoque, data_atualizacao, pizza_id_pizza, fornecedor_id_fornecedor) VALUES (10, '2020-03-06', 5, 5);
 
 
-SELECT pizza.nome_pizza from pizza INNER JOIN pedidos ON pizza.id_pizza = pedidos.pizza_id_pizza WHERE pedidos.valor_pedido > 35.00;
 
 SELECT * FROM cliente;
 SELECT * FROM funcionarios;
@@ -215,5 +214,3 @@ SELECT * FROM entregas;
 SELECT * FROM pagamentos;
 SELECT * FROM fornecedor;
 SELECT * FROM estoque;
-
-
